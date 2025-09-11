@@ -157,7 +157,7 @@ body {
      position: relative;
      transition: all 0.3s ease;
      overflow: hidden;
- }
+ 
 
  .theme-toggle::before {
      content: '';
@@ -694,19 +694,6 @@ textarea {
 }
 
 /* Submit Button */
-.btn-submit {
-  margin-top: 20px;
-  width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 25px;
-  background: linear-gradient(90deg, #ff512f, #f09819);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
-}
 .btn-submit:hover {
   opacity: 0.9;
 }
@@ -1441,5 +1428,320 @@ body.dark-mode .stars {
 .trust-item {
   cursor: pointer; /* shows hand cursor */
 }
+     /* 🖥️ Large Desktop (1440px and above) */
+@media screen and (min-width: 1440px) {
+    .container { max-width: 1400px; padding: 0 50px; }
+    .grid-container { grid-template-columns: repeat(4, 1fr); }
+    .video-grid { grid-template-columns: repeat(3, 1fr); }
+    .cards-container { justify-content: space-between; }
+    h1 { font-size: clamp(42px, 5vw, 60px); }
+    .hero { padding: 80px 0; }
+}
+
+/* 🖥️ Desktop (1200px - 1439px) */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+    .container { max-width: 1200px; padding: 0 40px; }
+    .grid-container { grid-template-columns: repeat(3, 1fr); }
+    .video-grid { grid-template-columns: repeat(3, 1fr); }
+    h1 { font-size: clamp(36px, 4.5vw, 48px); }
+    .hero { padding: 60px 0; }
+}
+
+/* 💻 Laptop (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .container { max-width: 960px; padding: 0 30px; }
+    .grid-container { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .video-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-menu { gap: 15px; }
+    h1 { font-size: clamp(32px, 4vw, 42px); }
+    .hero { padding: 50px 0; }
+    
+    /* Adjust cards for laptop */
+    .course-card { width: 280px; }
+    .flip-card { max-width: 280px; height: 220px; }
+}
+
+/* 📱 Tablet Portrait & Small Laptop (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .container { max-width: 720px; padding: 0 25px; }
+}
+    /* 📱 Mobile Landscape & Small Tablet (576px - 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .container { max-width: 540px; padding: 0 20px; }
+    
+    /* Hide desktop navigation, show mobile */
+    .nav-menu { 
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 65px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        flex-direction: column;
+        width: 200px;
+        z-index: 1001;
+    }
+    .nav-menu.open { display: flex; }
+    .mobile-menu-btn { display: block; }
+    
+    /* Logo adjustments */
+    .logo-img { height: 44px; }
+    
+    /* Typography scaling */
+    h1 { font-size: clamp(24px, 3.5vw, 32px); }
+    h2 { font-size: clamp(20px, 3vw, 26px); }
+    h3 { font-size: clamp(18px, 2.5vw, 22px); }
+    
+    /* Grid system */
+    .grid-container { 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .grid-item img { height: 200px; }
+    
+    /* Video grid */
+    .video-grid { grid-template-columns: 1fr; }
+    
+    /* Hero section */
+    .hero { padding: 35px 0; }
+    
+    /* Cards */
+    .cards-container { flex-direction: column; align-items: center; }
+    .course-card { width: 100%; max-width: 350px; }
+    
+    /* Feature cards */
+    .features-grid { grid-template-columns: 1fr; gap: 20px; }
+    
+    /* Form */
+    .form-card { padding: 20px; margin: 0 10px; }
+    
+    /* Footer */
+    .footer-content { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    
+    /* Stats grid */
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+
+/* 📱 Mobile Portrait (320px - 575px) */
+@media screen and (max-width: 575px) {
+    .container { padding: 0 15px; }
+    
+    /* Navigation - Mobile First */
+    .nav-container { 
+        padding: 8px 15px;
+        flex-wrap: wrap;
+    }
+    .logo-img { height: 38px; }
+    .nav-menu { 
+        width: 180px;
+        top: 60px;
+        right: 15px;
+    }
+    
+    /* Typography - Mobile optimized */
+    h1 { 
+        font-size: clamp(20px, 5vw, 28px); 
+        line-height: 1.2;
+        text-align: center;
+    }
+    h2 { font-size: clamp(18px, 4.5vw, 24px); }
+    h3 { font-size: clamp(16px, 4vw, 20px); }
+    p { font-size: 14px; line-height: 1.5; }
+    
+    /* Hero section - Mobile optimized */
+    .hero { padding: 25px 0; }
+    .hero .hero-content { 
+        padding: 10px;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    /* Grid system - Single column */
+    .grid-container { 
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .grid-item img { height: 180px; }
+    
+    /* Cards - Full width */
+    .cards-container { 
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+    .course-card { 
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* Flip cards */
+    .flip-card { 
+        max-width: 100%;
+        height: 180px;
+    }
+    
+    /* Features grid */
+    .features-grid { 
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .feature-card { padding: 25px 20px; }
+    
+    /* Form - Mobile optimized */
+    .form-card { 
+        padding: 15px;
+        margin: 0 5px;
+    }
+    .form-grid { 
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    input, select, textarea { 
+        padding: 10px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Contact section */
+    .contact-grid { grid-template-columns: 1fr; gap: 15px; }
+    .contact-card { padding: 15px; }
+    
+    /* Buttons - Touch friendly */
+    .btn-primary, .btn-submit, .float-btn {
+        min-height: 44px; /* Touch target size */
+        font-size: 16px;
+    }
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Footer - Stack everything */
+    .footer-content { 
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    /* Stats - Stack on mobile */
+    .stats-grid { 
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .stat-number { font-size: 2.5rem; }
+    
+    /* Reasons section */
+    .reasons-content { grid-template-columns: 1fr; }
+    .reasons-slider { height: 200px; }
+    .reason-box { 
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    /* Trust section */
+    .trust-logos { 
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .trust-item { width: 100%; max-width: 250px; }
+    
+    /* FAQ */
+    .faq-question { 
+        padding: 12px;
+        font-size: 15px;
+    }
+    .faq-answer { padding: 12px; }
+    
+    /* Modal adjustments */
+    .modal { padding: 10px; }
+    .modal-content { margin: 0 10px; }
+    .modal-body { padding: 15px; }
+    
+    /* Floating buttons - Adjust for mobile */
+    .floating-buttons { 
+        right: 10px;
+        bottom: 10px;
+    }
+    .float-btn { 
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* 📱 Very Small Mobile (320px and below) */
+@media screen and (max-width: 320px) {
+    .container { padding: 0 10px; }
+    
+    /* Extra small adjustments */
+    .logo-img { height: 32px; }
+    h1 { font-size: 18px; }
+    h2 { font-size: 16px; }
+    h3 { font-size: 15px; }
+    p { font-size: 13px; }
+    
+    .hero { padding: 20px 0; }
+    .grid-item img { height: 150px; }
+    .feature-card { padding: 20px 15px; }
+    .form-card { padding: 12px; }
+    .contact-card { padding: 12px; }
+    
+    /* Ensure buttons remain touch-friendly */
+    .btn-primary, .btn-submit { 
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+}
+
+/* ========== RESPONSIVE UTILITIES ========== */
+
+/* Responsive text sizing using clamp */
+.responsive-text-xl { font-size: clamp(24px, 4vw, 48px); }
+.responsive-text-lg { font-size: clamp(20px, 3.5vw, 32px); }
+.responsive-text-md { font-size: clamp(16px, 3vw, 24px); }
+.responsive-text-sm { font-size: clamp(14px, 2.5vw, 18px); }
+
+/* Responsive spacing */
+.responsive-padding { padding: clamp(15px, 4vw, 40px); }
+.responsive-margin { margin: clamp(15px, 4vw, 40px) 0; }
+
+/* Hide/Show elements based on screen size */
+.hide-mobile { display: block; }
+.show-mobile { display: none; }
+
+@media screen and (max-width: 767px) {
+    .hide-mobile { display: none; }
+    .show-mobile { display: block; }
+}
+
+/* ========== ACCESSIBILITY & PERFORMANCE ========== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .trust-badge, .badge {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Print styles */
+@media print {
+    .floating-buttons, .mobile-menu-btn, .nav-menu, .modal {
+        display: none !important;
+    }
+    body { font-size: 12pt; line-height: 1.4; }
+    .container { max-width: none; padding: 0; }
+}
+
+
 
 
