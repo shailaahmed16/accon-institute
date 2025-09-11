@@ -1670,77 +1670,9 @@ body.dark-mode .stars {
     }
 }
 
-/* 📱 Very Small Mobile (320px and below) */
-@media screen and (max-width: 320px) {
-    .container { padding: 0 10px; }
-    
-    /* Extra small adjustments */
-    .logo-img { height: 32px; }
-    h1 { font-size: 18px; }
-    h2 { font-size: 16px; }
-    h3 { font-size: 15px; }
-    p { font-size: 13px; }
-    
-    .hero { padding: 20px 0; }
-    .grid-item img { height: 150px; }
-    .feature-card { padding: 20px 15px; }
-    .form-card { padding: 12px; }
-    .contact-card { padding: 12px; }
-    
-    /* Ensure buttons remain touch-friendly */
-    .btn-primary, .btn-submit { 
-        min-height: 44px;
-        padding: 12px 20px;
-    }
-}
 
-/* ========== RESPONSIVE UTILITIES ========== */
 
-/* Responsive text sizing using clamp */
-.responsive-text-xl { font-size: clamp(24px, 4vw, 48px); }
-.responsive-text-lg { font-size: clamp(20px, 3.5vw, 32px); }
-.responsive-text-md { font-size: clamp(16px, 3vw, 24px); }
-.responsive-text-sm { font-size: clamp(14px, 2.5vw, 18px); }
 
-/* Responsive spacing */
-.responsive-padding { padding: clamp(15px, 4vw, 40px); }
-.responsive-margin { margin: clamp(15px, 4vw, 40px) 0; }
-
-/* Hide/Show elements based on screen size */
-.hide-mobile { display: block; }
-.show-mobile { display: none; }
-
-@media screen and (max-width: 767px) {
-    .hide-mobile { display: none; }
-    .show-mobile { display: block; }
-}
-
-/* ========== ACCESSIBILITY & PERFORMANCE ========== */
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .trust-badge, .badge {
-        border: 2px solid currentColor;
-    }
-}
-
-/* Print styles */
-@media print {
-    .floating-buttons, .mobile-menu-btn, .nav-menu, .modal {
-        display: none !important;
-    }
-    body { font-size: 12pt; line-height: 1.4; }
-    .container { max-width: none; padding: 0; }
-}
 
 
 
