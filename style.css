@@ -1428,55 +1428,12 @@ body.dark-mode .stars {
 .trust-item {
   cursor: pointer; /* shows hand cursor */
 }
-     /* 🖥️ Large Desktop (1440px and above) */
-@media screen and (min-width: 1440px) {
-    .container { max-width: 1400px; padding: 0 50px; }
-    .grid-container { grid-template-columns: repeat(4, 1fr); }
-    .video-grid { grid-template-columns: repeat(3, 1fr); }
-    .cards-container { justify-content: space-between; }
-    h1 { font-size: clamp(42px, 5vw, 60px); }
-    .hero { padding: 80px 0; }
-}
-
-/* 🖥️ Desktop (1200px - 1439px) */
-@media screen and (min-width: 1200px) and (max-width: 1439px) {
-    .container { max-width: 1200px; padding: 0 40px; }
-    .grid-container { grid-template-columns: repeat(3, 1fr); }
-    .video-grid { grid-template-columns: repeat(3, 1fr); }
-    h1 { font-size: clamp(36px, 4.5vw, 48px); }
-    .hero { padding: 60px 0; }
-}
-
-/* 💻 Laptop (992px - 1199px) */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-    .container { max-width: 960px; padding: 0 30px; }
-    .grid-container { grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .video-grid { grid-template-columns: repeat(2, 1fr); }
-    .nav-menu { gap: 15px; }
-    h1 { font-size: clamp(32px, 4vw, 42px); }
-    .hero { padding: 50px 0; }
-    
-    /* Adjust cards for laptop */
-    .course-card { width: 280px; }
-    .flip-card { max-width: 280px; height: 220px; }
-
-
-/* 📱 Tablet Portrait & Small Laptop (768px - 991px) */
-@media screen and (min-width: 768px) and (max-width: 991px){
-    .container { max-width: 720px; padding: 0 25px; }
-}
-    /* 📱 Mobile Landscape & Small Tablet (576px - 767px) */
-@media screen and (min-width: 576px) and (max-width: 767px) {
-    .container { max-width: 540px; padding: 0 20px; }
-
-/* 📱 Mobile Portrait (320px - 575px) */
-@media screen and (max-width: 575px) {
-    .container { padding: 0 15px; }
 
 
 
     
     
+
 
 
 
