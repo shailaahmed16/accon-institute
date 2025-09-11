@@ -886,7 +886,25 @@
         <button class="scroll-btn" id="scrollDown" title="Scroll to Bottom">↓</button>
     </div>
 
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuBtn.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('open');
+            }
+        });
+    }
+});
+</script>
 
 
 
@@ -899,4 +917,5 @@
 </body>
 
 </html>
+
 
