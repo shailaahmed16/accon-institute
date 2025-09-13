@@ -195,6 +195,25 @@ document.querySelectorAll('.btn').forEach(btn => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const plusSign = this.querySelector('.plus');
+            
+            faqItem.classList.toggle('active');
+            
+            if (faqItem.classList.contains('active')) {
+                plusSign.textContent = '−';
+            } else {
+                plusSign.textContent = '+';
+            }
+        });
+    });
+});
+
 // Add ripple animation CSS
 const style = document.createElement('style');
 style.textContent = `
@@ -384,6 +403,7 @@ document.querySelectorAll(".trust-item").forEach(item => {
     window.open(url, "_blank");
   });
 });
+
 
 
 
