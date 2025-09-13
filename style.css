@@ -468,7 +468,7 @@ h1 .highlight {
     background: #1976d2
 }
 
-/* ------------- 3x3 qualifiers grid ------------- */
+/*  qualifiers grid */
 .grid-container {
     max-width: 1100px;
     margin: 18px auto;
@@ -2395,6 +2395,7 @@ body.dark-mode .stars {
         background: rgba(0,0,0,0.9);
     }
 }
+
 
 
 
